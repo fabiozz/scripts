@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# varre um range IP usando DNS reverso, utilizar após pegar o netblock.
+
 prefix=$1
 start=$2
 end=$3
