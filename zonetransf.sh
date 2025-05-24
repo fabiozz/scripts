@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#serve para fazer transferência de zona e coletar informações armazenadas no nameserver.
+
 dominio=$1
 
 if [ -z "$dominio" ]; then
