@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# basicamente tecnica de port knocking.
+
 # Verifica se o argumento foi passado
 if [ "$1" == "" ]
 then
