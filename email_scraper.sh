@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# coleta de e-mails expostos em sites relacionados a um domínio principal
+# sudo apt install cewl
+# ./email_scraper.sh example.com
+
 if [ -z "$1" ]; then
   echo "Uso: $0 dominio.com"
   exit 1
@@ -14,7 +18,7 @@ emails_file="emails_found.txt"
 
 echo "[*] Coletando hosts do domínio principal: $main_domain"
 
-# Pega o conteúdo da página principal
+# pega o conteúdo da página principal
 page_content=$(curl -s "http://www.$main_domain")
 
 if [ -z "$page_content" ]; then
@@ -22,10 +26,10 @@ if [ -z "$page_content" ]; then
   exit 1
 fi
 
-# Extrai hosts/domínios do conteúdo
+# extrai hosts/domínios do conteúdo
 echo "$page_content" | grep -Eo 'https?://[^/"]+' | sed -E 's#https?://##' | cut -d/ -f1 | sort -u > "$hosts_file"
 
-# Garante que o domínio principal está na lista
+# garante que o domínio principal está na lista
 if ! grep -q "$main_domain" "$hosts_file"; then
   echo "$main_domain" >> "$hosts_file"
 fi
