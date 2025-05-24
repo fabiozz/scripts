@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# testa todos os tipos de registros do host
+
 target=$1
 
 if [ -z "$target" ]; then
