@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # varre um range IP usando DNS reverso, utilizar após pegar o netblock.
+# ./reversedns.sh 34.175.25 230 250
 
 prefix=$1
 start=$2
