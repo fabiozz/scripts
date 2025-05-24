@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# testa todos os tipos de registros do host
+# testa todos os tipos de registros dns do host (SOA, A, AAAA, NS, CNAME, MX, PTR, HINFO, TXT)
+# ./testdomain.sh exemplo.com
 
 target=$1
 
