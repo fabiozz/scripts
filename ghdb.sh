@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# tecnica ghdb para fazer consultas e pegar dorks especificas.
+
 SEARCH="firefox"
 ALVO="$1"
 
